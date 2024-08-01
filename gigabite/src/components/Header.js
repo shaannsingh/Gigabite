@@ -11,7 +11,7 @@ function Header({ toggleSidebar }) {
                 <button>plans</button>
                 <button>calories</button>
             </nav>
-            <h1>Gigabite</h1>
+            <h1></h1>
         </header>
     );
 }
