@@ -20,6 +20,7 @@
   } 
 
   nav button {
+    font-size: 15px;
     padding: 5px 10px;
     background-color: #252525;
     color: white;
