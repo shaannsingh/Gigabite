@@ -1,15 +1,23 @@
 import React from 'react';
 import './App.css';
-import Recipes from './components/Recipes';
 import Header from './components/Header';
 import Sidebar from './components/Sidebar';
-import Home from './components/Home';
+import Home from './components/HomePage';
 
 function App() {
+  const [isSidebarOpen, setIsSidebarOpen] = useState(false);
+
+  const toggleSidebar = () => {
+    setIsSidebarOpen(!isSidebarOpen);
+  };
+
   return (
     <div className="App">
-      <h1>Gigabite</h1>
-      <Recipes />
+      <Header toggleSidebar={toggleSidebar} />
+      <Sidebar isOpen={isSidebarOpen} />
+      <main className="main-content">
+        <HomePage />
+      </main>
     </div>
   );
 }
