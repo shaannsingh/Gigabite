@@ -1,8 +1,8 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './App.css';
 import Header from './components/Header';
 import Sidebar from './components/Sidebar';
-import Home from './components/HomePage';
+import HomePage from './components/HomePage';
 
 function App() {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);

@@ -13,6 +13,8 @@ function Header({ toggleSidebar }) {
             </nav>
             <h1>Gigabite</h1>
         </header>
-    )
+    );
 }
+
+export default Header;
 
