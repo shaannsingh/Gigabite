@@ -6,6 +6,12 @@ function Header({ toggleSidebar }) {
         <header className='header'>
             <button onClick={toggleSidebar} className='sidebar-toggle'>
             </button>
+            <nav>
+                <button>meals</button>
+                <button>plans</button>
+                <button>calories</button>
+            </nav>
+            <h1>Gigabite</h1>
         </header>
     )
 }
