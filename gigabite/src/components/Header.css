@@ -3,7 +3,7 @@
     justify-content: space-between;
     align-items: center;
     padding: 10px 20px;
-    background-color: #333;
+    background-color: #252525;
     color: white;
   }
   
@@ -13,12 +13,37 @@
     color: white;
     cursor: pointer;
   }
-  
+  nav {
+    margin-left: auto;
+    display: flex;
+    gap: 20px;
+  } 
+
   nav button {
-    margin-left: 10px;
     padding: 5px 10px;
-    background-color: #555;
+    background-color: #252525;
     color: white;
     border: none;
     cursor: pointer;
   }
+
+  .sidebar-toggle {
+  background: none;
+  border: none;
+  font-size: 40px;
+  cursor: pointer;
+  color: #ffffff; 
+  padding: 10px;
+}
+
+.sidebar-toggle:hover {
+  color: #ffffff; 
+}
+
+.header-sidebar-toggle {
+  background: none;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+  padding: 10px;
+}

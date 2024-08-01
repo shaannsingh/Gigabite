@@ -1,49 +1,119 @@
 .sidebar {
-    position: fixed;
-    left: -250px;
-    top: 0;
-    bottom: 0;
-    width: 250px;
-    background-color: #222;
-    color: white;
-    transition: left 0.3s ease-in-out;
-    padding: 20px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 250px;
+  background-color: #ffffff;
+  color: #333;
+  transform: translateX(-100%);
+  transition: transform 0.3s ease-in-out;
+  z-index: 1000;
+  padding: 20px;
+  box-sizing: border-box;
+  box-shadow: 2px 0 5px rgba(0,0,0,0.1);
+}
+
+.sidebar.open {
+  transform: translateX(0);
+}
+
+.sidebar-toggle {
+  position: fixed;
+  top: -12px;
+  left: 0px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 10px;
+  z-index: 1002;
+  transition: left 0.5s ease-in-out;
+}
+
+.sidebar.open .sidebar-toggle {
+  top: 4px;
+  left: 200px;
+}
+
+.hamburger-icon {
+  width: 30px;
+  height: 24px;
+  position: relative;
+  transform: rotate(0deg);
+  transition: 0.5s ease-in-out;
+}
+
+.hamburger-icon span {
+  display: block;
+  position: absolute;
+  height: 4px;
+  width: 100%;
+  background: #333;
+  border-radius: 9px;
+  opacity: 1;
+  left: 0;
+  transform: rotate(0deg);
+  transition: 0.75s ease-in-out;
+}
+
+.hamburger-icon span:nth-child(1) {
+  top: 0px;
+}
+
+.hamburger-icon span:nth-child(2) {
+  top: 10px;
+}
+
+.hamburger-icon span:nth-child(3) {
+  top: 20px;
+}
+
+.sidebar.open .hamburger-icon span:nth-child(1) {
+  top: 10px;
+  transform: rotate(135deg);
+}
+
+.sidebar.open .hamburger-icon span:nth-child(2) {
+  opacity: 0;
+  left: -60px;
+}
+
+.sidebar.open .hamburger-icon span:nth-child(3) {
+  top: 10px;
+  transform: rotate(-135deg);
+}
+
+.sidebar h2 {
+  margin-top: 40px;
+  margin-bottom: 20px;
+  font-size: 24px;
+  color: #333;
+}
+
+.sidebar ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.sidebar li {
+  padding: 10px 0;
+  font-size: 18px;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.sidebar li:hover {
+  color: #666;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .sidebar {
+    width: 200px;
   }
   
-  .sidebar.open {
-    left: 0;
+  .sidebar.open .sidebar-toggle {
+    left: 220px;
   }
-  
-  .sidebar ul {
-    list-style-type: none;
-    padding: 0;
-  }
-  
-  .sidebar li {
-    padding: 10px 0;
-    cursor: pointer;
-  }.sidebar {
-    position: fixed;
-    left: -250px;
-    top: 0;
-    bottom: 0;
-    width: 250px;
-    background-color: #222;
-    color: white;
-    transition: left 0.3s ease-in-out;
-    padding: 20px;
-  }
-  
-  .sidebar.open {
-    left: 0;
-  }
-  
-  .sidebar ul {
-    list-style-type: none;
-    padding: 0;
-  }
-  
-  .sidebar li {
-    padding: 10px 0;
-    cursor: pointer;
-  }
+}
