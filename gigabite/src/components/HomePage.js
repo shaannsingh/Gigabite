@@ -11,6 +11,8 @@ function HomePage() {
     return (
         <div className='home-page'>
             <h2>gigabite.</h2>
+            <div className="dish-loop">
+            </div>
             <form onSubmit={handleSearch}>
                 <div className="input-container">
                     <input
@@ -23,7 +25,7 @@ function HomePage() {
                     </button>
                 </div>
             </form>
-        </div>
+         </div>
     );
 }
 
