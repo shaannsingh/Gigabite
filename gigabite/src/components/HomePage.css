@@ -13,12 +13,46 @@
     padding: 10px;
     width: 300px;
     margin-right: 10px;
+    border-radius: 25px;
+    border: 2px solid #7f7557;
+    background-color: rgba(255, 255, 255, 0);
+    color: #383838;
+    font-size: 13px;
+    outline: none;  /* Removes the default focus outline */
+    transition: all 0.3s ease;  /* Smooth transition for hover effects */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.5);
+  }
+
+  .input-container {
+    position: relative;
+    display: inline-block;
+    width: 350px;
+  }
+
+  input::placeholder {
+    color: rgba(31, 31, 31, 0.7); /* Semi-transparent version of the text color */
+  }
+
+  input:focus {
+    border-color: rgba(70, 70, 70, 0.8);
+    background-color: rgba(255, 255, 255, 0.3);
+    box-shadow: 0 0 8px rgba(70, 70, 70, 0.3);  /* Adds a subtle glow when focused */
   }
   
-  button {
-    padding: 10px 20px;
-    background-color: #ffffff;
-    color: rgb(73, 73, 73);
+  .search-button {
+    position: absolute;
+    right: 28px;
+    top: 67%;
+    transform: translateY(-50%);
+    background: none;
     border: none;
+    padding: 0;
+    font-size: 13px;
+    color: #424242;
     cursor: pointer;
-  }
+    transition: color 0.3s ease;
+}
+
+.search-button:hover {
+    color: #b8a872;
+}
