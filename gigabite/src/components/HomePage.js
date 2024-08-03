@@ -11,6 +11,11 @@ function HomePage() {
     return (
         <div className='home-page'>
             <h2>gigabite.</h2>
+            <div className="button-container">
+                <button className="home-button">i have eggs and some heavy cream.</button>
+                <button className="home-button">make me a sundowner cheese board.</button>
+                <button className="home-button">let's try a healty, sugar-free oats desert.</button>
+            </div>
             <div className="dish-loop">
             </div>
             <form onSubmit={handleSearch}>

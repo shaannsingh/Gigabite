@@ -2,7 +2,7 @@
   background-color: #d5c48e;
   display: flex;
   flex-direction: column;
-  min-height: 1000vh;
+  min-height: 100vh;
 }
 
 .main-content {
