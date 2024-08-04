@@ -9,7 +9,7 @@ function HomePage({ isSideBarOpen }) {
     };
 
     return (
-        <div className='home-page'>
+        <div className={`home-page ${isSideBarOpen ? 'sidebar-open' : ''}`}>
             <h2>gigabite.</h2>
             <div className="button-container">
                 <button className="home-button">i have eggs and some heavy cream.</button>
