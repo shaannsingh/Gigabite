@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import './HomePage.css';
 
-function HomePage() {
+function HomePage({ isSideBarOpen }) {
     const [searchQuery, setSearchQuery] = useState('');
     const handleSearch = (e) => {
         e.preventDefault();
@@ -18,7 +18,7 @@ function HomePage() {
             </div>
             <div className="dish-loop">
             </div>
-            <form onSubmit={handleSearch}>
+            <form onSubmit={handleSearch} className={isSideBarOpen ? 'shortened' : ''}>
                 <div className="input-container">
                     <input
                     type="text"

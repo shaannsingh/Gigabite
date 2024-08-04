@@ -47,12 +47,15 @@ form {
   position: absolute;
   bottom: 40px;
   left: 50%;
-  transform: translateX(-50%); 
+  transform: translateX(-50%);
+  width: 100%;
+  max-width: 600px;
+  transition: max-width 0.3s ease-in-out; 
 }
   
   input {
     padding: 12px;
-    width: 600px;
+    width: 100%;
     margin-right: 10px;
     border-radius: 25px;
     border: 2px solid #7f7557;
@@ -67,7 +70,8 @@ form {
   .input-container {
     position: relative;
     display: inline-block;
-    width: 600px;
+    width: 100%;
+    transition: width 0.3s ease-in-out;
   }
 
   input::placeholder {
@@ -96,4 +100,19 @@ form {
 
 .search-button:hover {
     color: #b8a872;
+}
+
+.shortened-input {
+  width: calc(100% - 250px); /* Adjust 250px to match your sidebar width */
+  transition: width 0.3s ease-in-out;
+}
+
+form.shortened {
+  max-width: calc(600px - 250px); /* Adjust 250px to match your sidebar width */
+}
+
+@media (max-width: 768px) {
+  form.shortened {
+    max-width: calc(100% - 200px); /* Adjust if your sidebar is narrower on mobile */
+  }
 }

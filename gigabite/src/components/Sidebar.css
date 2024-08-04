@@ -4,18 +4,19 @@
   left: 0;
   height: 100vh;
   width: 250px;
-  background-color: #ffffff;
-  color: #333;
+  background-color: #252525;
+  color: #c9c9c9;
   transform: translateX(-100%);
   transition: transform 0.3s ease-in-out;
   z-index: 1000;
   padding: 20px;
   box-sizing: border-box;
-  box-shadow: 2px 0 5px rgba(0,0,0,0.1);
+  box-shadow: 2px 0 5px rgba(0,0,0,0.8s);
 }
 
 .sidebar.open {
   transform: translateX(0);
+  background-color: #252525;
 }
 
 .sidebar-toggle {
@@ -27,67 +28,43 @@
   cursor: pointer;
   padding: 10px;
   z-index: 1002;
-  transition: left 0.5s ease-in-out;
 }
 
-.sidebar.open .sidebar-toggle {
-  top: 4px;
-  left: 200px;
+.close-icon {
+  width: 20px;
+  height: 20px;
 }
 
-.hamburger-icon {
-  width: 30px;
-  height: 24px;
-  position: relative;
-  transform: rotate(0deg);
-  transition: 0.5s ease-in-out;
-}
 
-.hamburger-icon span {
-  display: block;
+.close-icon::before,
+.close-icon::after {
+  content: '';
   position: absolute;
-  height: 4px;
   width: 100%;
-  background: #333;
-  border-radius: 9px;
-  opacity: 1;
+  height: 2px;
+  background-color: #333;
+  top: 50%;
   left: 0;
-  transform: rotate(0deg);
-  transition: 0.75s ease-in-out;
 }
 
-.hamburger-icon span:nth-child(1) {
-  top: 0px;
+.sidebar.open .close-icon::before,
+.sidebar.open .close-icon::after {
+  background-color: #000000; /* Black color when sidebar is open */
 }
 
-.hamburger-icon span:nth-child(2) {
-  top: 10px;
+.close-icon::before {
+  transform: rotate(45deg);
 }
 
-.hamburger-icon span:nth-child(3) {
-  top: 20px;
-}
-
-.sidebar.open .hamburger-icon span:nth-child(1) {
-  top: 10px;
-  transform: rotate(135deg);
-}
-
-.sidebar.open .hamburger-icon span:nth-child(2) {
-  opacity: 0;
-  left: -60px;
-}
-
-.sidebar.open .hamburger-icon span:nth-child(3) {
-  top: 10px;
-  transform: rotate(-135deg);
+.close-icon::after {
+  transform: rotate(-45deg);
 }
 
 .sidebar h2 {
   margin-top: 40px;
   margin-bottom: 20px;
   font-size: 24px;
-  color: #333;
+  color: #e0e0e0;
 }
 
 .sidebar ul {
@@ -112,8 +89,8 @@
   .sidebar {
     width: 200px;
   }
-  
-  .sidebar.open .sidebar-toggle {
-    left: 220px;
+
+    .sidebar.open .sidebar-toggle {
+    transform: translateX(200px);
   }
 }

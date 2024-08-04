@@ -19,8 +19,8 @@ function App() {
     <div className="App">
       <Header toggleSidebar={toggleSidebar} />
       <Sidebar isOpen={isSidebarOpen} onClose={closeSidebar} />
-      <main className="main-content">
-        <HomePage />
+      <main className={`main-content ${isSidebarOpen ? 'sidebar-open' : ''}`}>
+        <HomePage isSideBarOpen={isSidebarOpen}/>
       </main>
     </div>
   );
