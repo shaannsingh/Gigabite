@@ -20,7 +20,7 @@ body, html {
   display: flex;
   justify-content: center;
   gap: 20px;
-  margin-top: -35px;
+  margin-top: -30px;
   margin-bottom: 0px;
 }
 
@@ -109,6 +109,47 @@ form {
 
 .search-button:hover {
     color: #b8a872;
+}
+
+.home-page.chat-active {
+  justify-content: flex-start;
+  padding-top: 20px;
+}
+
+.chat-container {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+  margin-top: -40px;
+  overflow-y: auto;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.message {
+  font-size: 18px;
+  max-width: 70%;
+  padding: 10px 15px;
+  border-radius: 20px;
+  margin-bottom: 10px;
+  word-wrap: break-word;
+}
+
+.message.user {
+  text-align: left;
+  align-self: flex-end;
+  background-color: #c9b985;
+  color: #3e3d3d;
+}
+
+.message.bot {
+  text-align: left;
+  align-self: flex-start;
+  background-color: #decd93;
+  color: #3a3939;
 }
 
 @media (max-width: 768px) {
