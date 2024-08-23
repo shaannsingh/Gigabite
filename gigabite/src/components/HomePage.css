@@ -116,42 +116,6 @@ form {
   padding-top: 20px;
 }
 
-.chat-container {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-  max-width: 800px;
-  margin: 0 auto;
-  margin-top: -40px;
-  overflow-y: auto;
-  padding: 20px;
-  box-sizing: border-box;
-}
-
-.message {
-  font-size: 18px;
-  max-width: 70%;
-  padding: 10px 15px;
-  border-radius: 20px;
-  margin-bottom: 10px;
-  word-wrap: break-word;
-}
-
-.message.user {
-  text-align: left;
-  align-self: flex-end;
-  background-color: #c9b985;
-  color: #3e3d3d;
-}
-
-.message.bot {
-  text-align: left;
-  align-self: flex-start;
-  background-color: #decd93;
-  color: #3a3939;
-}
-
 @media (max-width: 768px) {
   form.shortened {
     max-width: calc(100% - 200px); /* Adjust if your sidebar is narrower on mobile */
